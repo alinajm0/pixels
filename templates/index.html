@@ -1,0 +1,552 @@
+{% extends "layout.html"%} {% block content %}
+
+<section class="section first-section ">
+    {% if brands %}
+    <div class="container-fluid ">
+        <div class="masonry-blog clearfix ">
+            <div class="left-side ">
+                <div class="masonry-box post-media ">
+                    <img src="../{{ brands[0]['img_path'] }}" alt=" " class="img-fluid ">
+                    <div class="shadoweffect ">
+                        <div class="shadow-desc ">
+                            <div class="blog-meta ">
+                                <span class="bg-pink "><a href="blog-category.html " title=" ">Beauty</a></span>
+                                <h4><a href="single.html " title=" ">{{ brands[0]['desc'] }}</a></h4>
+
+                            </div>
+                            <!-- end meta -->
+                        </div>
+                        <!-- end shadow-desc -->
+                    </div>
+                    <!-- end shadow -->
+                </div>
+                <!-- end post-media -->
+            </div>
+            <!-- end left-side -->
+
+            <div class="center-side ">
+                <div class="masonry-box post-media ">
+                    <img src="../{{ brands[1]['img_path'] }}" alt=" " class="img-fluid ">
+                    <div class="shadoweffect ">
+                        <div class="shadow-desc ">
+                            <div class="blog-meta ">
+                                <span class="bg-pink "><a href="blog-category.html " title=" ">Travel</a></span>
+                                <h4><a href="single.html " title=" ">{{ brands[1]['desc'] }}</a></h4>
+
+
+                            </div>
+                            <!-- end meta -->
+                        </div>
+                        <!-- end shadow-desc -->
+                    </div>
+                    <!-- end shadow -->
+                </div>
+                <!-- end post-media -->
+
+                <div class="masonry-box small-box post-media ">
+                    <img src="../{{ brands[2]['img_path'] }}" alt=" " class="img-fluid ">
+                    <div class="shadoweffect ">
+                        <div class="shadow-desc ">
+                            <div class="blog-meta ">
+                                <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                <h4><a href="single.html " title=" ">{{ brands[2]['desc'] }}</a></h4>
+                            </div>
+                            <!-- end meta -->
+                        </div>
+                        <!-- end shadow-desc -->
+                    </div>
+                    <!-- end shadow -->
+                </div>
+                <!-- end post-media -->
+
+                <div class="masonry-box small-box post-media ">
+                    <img src="../{{ brands[3]['img_path'] }}" alt=" " class="img-fluid ">
+                    <div class="shadoweffect ">
+                        <div class="shadow-desc ">
+                            <div class="blog-meta ">
+                                <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                <h4><a href="single.html " title=" ">{{ brands[3]['desc'] }}</a></h4>
+                            </div>
+                            <!-- end meta -->
+                        </div>
+                        <!-- end shadow-desc -->
+                    </div>
+                    <!-- end shadow -->
+                </div>
+                <!-- end post-media -->
+            </div>
+            <!-- end left-side -->
+
+            <div class="right-side hidden-md-down ">
+                <div class="masonry-box post-media ">
+                    <img src="../{{ brands[4]['img_path'] }}" alt=" " class="img-fluid ">
+                    <div class="shadoweffect ">
+                        <div class="shadow-desc ">
+                            <div class="blog-meta ">
+                                <span class="bg-pink "><a href="blog-category.html " title=" ">Favorite</a></span>
+                                <h4><a href="single.html " title=" ">{{ brands[4]['desc'] }}</a></h4>
+                            </div>
+                            <!-- end meta -->
+                        </div>
+                        <!-- end shadow-desc -->
+                    </div>
+                    <!-- end shadow -->
+                </div>
+                <!-- end post-media -->
+            </div>
+            <!-- end right-side -->
+        </div>
+        <!-- end masonry -->
+    </div>
+    {% endif %}
+</section>
+
+
+<section class="d-felx hidden-xs-down hidden-md-down hidden-sm-down ">
+    <div class="container-xl ">
+        <div class="row x1 ">
+            <div class="col-md-12 ">
+                <h2>TOP <b>PIXELS</b></h2>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                    <!-- Carousel indicators -->
+
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item carousel-item active">
+                            {% for pixel in top_pixel %}
+                            <div class="row">   
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="../{{ pixel['img_path'] }}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>{{ pixel['desc'] }}</h4>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="section wb">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <div class="page-wrapper">
+
+                    <div class="blog-grid-system ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="single.html" title="">
+                                            <img src="upload/blog_travel_01.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span></span>
+                                            </div>
+                                            <!-- end hover -->
+                                        </a>
+                                        <div class="shadoweffect ">
+                                            <div class="shadow-desc ">
+                                                <div class="blog-meta ">
+
+                                                    <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                                </div>
+                                                <!-- end meta -->
+                                            </div>
+                                            <!-- end shadow-desc -->
+                                        </div>
+                                        <!-- end shadow -->
+                                    </div>
+                                    <!-- end media -->
+
+                                </div>
+                                <!-- end blog-box -->
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-md-6">
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="single.html" title="">
+                                            <img src="upload/blog_travel_02.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span></span>
+                                            </div>
+                                            <!-- end hover -->
+                                        </a>
+                                        <div class="shadoweffect ">
+                                            <div class="shadow-desc ">
+                                                <div class="blog-meta ">
+
+                                                    <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                                </div>
+                                                <!-- end meta -->
+                                            </div>
+                                            <!-- end shadow-desc -->
+                                        </div>
+                                        <!-- end shadow -->
+                                    </div>
+                                    <!-- end media -->
+
+                                </div>
+                                <!-- end blog-box -->
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-md-6">
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="single.html" title="">
+                                            <img src="upload/blog_travel_03.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span></span>
+                                            </div>
+                                            <!-- end hover -->
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+
+                                                        <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                            <!-- end shadow -->
+                                        </a>
+                                    </div>
+                                    <!-- end media -->
+
+                                </div>
+                                <!-- end blog-box -->
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-md-6">
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="single.html" title="">
+                                            <img src="upload/blog_travel_04.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span></span>
+                                            </div>
+                                            <!-- end hover -->
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+
+                                                        <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                            <!-- end shadow -->
+                                        </a>
+                                    </div>
+                                    <!-- end media -->
+
+                                </div>
+                                <!-- end blog-box -->
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-md-6">
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="single.html" title="">
+                                            <img src="upload/blog_travel_05.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span></span>
+                                            </div>
+                                            <!-- end hover -->
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+
+                                                        <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                            <!-- end shadow -->
+                                        </a>
+                                    </div>
+                                    <!-- end media -->
+
+                                    <!-- end meta -->
+                                </div>
+                                <!-- end blog-box -->
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-md-6">
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="single.html" title="">
+                                            <img src="upload/blog_travel_06.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span></span>
+                                            </div>
+                                            <!-- end hover -->
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+
+                                                        <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                            <!-- end shadow -->
+                                        </a>
+                                    </div>
+                                    <!-- end media -->
+
+                                    <!-- end meta -->
+                                </div>
+                                <!-- end blog-box -->
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-md-6">
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="single.html" title="">
+                                            <img src="upload/blog_travel_07.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span></span>
+                                            </div>
+                                            <!-- end hover -->
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+
+                                                        <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                            <!-- end shadow -->
+                                        </a>
+                                    </div>
+                                    <!-- end media -->
+
+                                </div>
+                                <!-- end blog-box -->
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-md-6">
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="single.html" title="">
+                                            <img src="upload/blog_travel_08.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span></span>
+                                            </div>
+                                            <!-- end hover -->
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+
+                                                        <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                            <!-- end shadow -->
+                                        </a>
+                                    </div>
+                                    <!-- end media -->
+
+                                </div>
+                                <!-- end blog-box -->
+                            </div>
+                            <!-- end col -->
+
+
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end blog-grid-system -->
+                </div>
+                <!-- end page-wrapper -->
+
+
+            </div>
+            <!-- end col -->
+
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <div class="sidebar">
+
+                    <div class="widget">
+
+                        <div class="blog-box ">
+                            <div class="post-media ">
+                                <a href="single.html " title=" ">
+                                    <img src="upload/blog_03.jpg " alt=" " class="img-fluid ">
+                                    <div class="hovereffect ">
+                                        <span></span>
+                                    </div>
+                                    <!-- end hover -->
+                                    <div class="shadoweffect ">
+                                        <div class="shadow-desc ">
+                                            <div class="blog-meta ">
+
+                                                <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                            </div>
+                                            <!-- end meta -->
+                                        </div>
+                                        <!-- end shadow-desc -->
+                                    </div>
+                                    <!-- end shadow -->
+                                </a>
+                            </div>
+                            <!-- end media -->
+
+                        </div>
+                        <!-- end blog-box -->
+
+
+                    </div>
+                    <div class="widget">
+
+                        <div class="blog-box ">
+                            <div class="post-media ">
+                                <a href="single.html " title=" ">
+                                    <img src="upload/blog_03.jpg " alt=" " class="img-fluid ">
+                                    <div class="hovereffect ">
+                                        <span></span>
+                                    </div>
+                                    <!-- end hover -->
+                                    <div class="shadoweffect ">
+                                        <div class="shadow-desc ">
+                                            <div class="blog-meta ">
+
+                                                <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                            </div>
+                                            <!-- end meta -->
+                                        </div>
+                                        <!-- end shadow-desc -->
+                                    </div>
+                                    <!-- end shadow -->
+                                </a>
+                            </div>
+                            <!-- end media -->
+
+                        </div>
+                        <!-- end blog-box -->
+
+
+                    </div>
+                    <div class="widget">
+
+                        <div class="blog-box ">
+                            <div class="post-media ">
+                                <a href="single.html " title=" ">
+                                    <img src="upload/blog_03.jpg " alt=" " class="img-fluid ">
+                                    <div class="hovereffect ">
+                                        <span></span>
+                                    </div>
+                                    <!-- end hover -->
+                                    <div class="shadoweffect ">
+                                        <div class="shadow-desc ">
+                                            <div class="blog-meta ">
+
+                                                <h4><a href="single.html " title=" ">The golden rules you need to know for a positive life</a></h4>
+
+                                            </div>
+                                            <!-- end meta -->
+                                        </div>
+                                        <!-- end shadow-desc -->
+                                    </div>
+                                    <!-- end shadow -->
+                                </a>
+                            </div>
+                            <!-- end media -->
+
+                        </div>
+                        <!-- end blog-box -->
+
+
+                    </div>
+                </div>
+                <!-- end widget -->
+
+            </div>
+            <!-- end sidebar -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end row -->
+
+    <!-- end container -->
+</section>
+
+<div class="demo text-center m-3 ">
+    <nav class="pagination-outer " aria-label="Page navigation ">
+        <ul class="pagination ">
+            <li class="page-item ">
+                <a href="# " class="page-link " aria-label="Previous ">
+                    <span aria-hidden="true ">Prev</span>
+                </a>
+            </li>
+            <li class="page-item "><a class="page-link " href="# ">1</a></li>
+            <li class="page-item active "><a class="page-link " href="# ">2</a></li>
+            <li class="page-item "><a class="page-link " href="# ">3</a></li>
+            <li class="page-item "><a class="page-link " href="# ">4</a></li>
+            <li class="page-item "><a class="page-link " href="# ">5</a></li>
+            <li class="page-item ">
+                <a href="# " class="page-link " aria-label="Next ">
+                    <span aria-hidden="true ">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+{% endblock %}

@@ -1,0 +1,240 @@
+{% extends "layout.html"%}
+{% block content %}
+
+<div class="container-fluid " id="grad1">
+    <div class="row justify-content-center mt-0">
+        <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2><strong>buy pixels</strong></h2>
+                <p>Fill all form field to go to next step</p>
+                <div class="row">
+                    <div class="col-md-12 mx-0">
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="account"><strong>Account</strong></li>
+                                <li id="personal"><strong>Uploads</strong></li>
+                                <li id="payment"><strong>Payment</strong></li>
+                                <li id="confirm"><strong>Finish</strong></li>
+                            </ul>
+                            <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title">Account Information</h2> <input type="email" name="email" placeholder="Email Id" /> <input type="text" name="uname" placeholder="UserName" /> <input type="password" name="pwd" placeholder="Password" /> <input type="password"
+                                        name="cpwd" placeholder="Confirm Password" />
+                                </div> <input type="button" name="next" class="next action-button" value="Next Step" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title">Personal Information</h2> <input type="text" name="fname" placeholder="First Name" /> <input type="text" name="lname" placeholder="Last Name" /> <input type="text" name="phno" placeholder="Contact No." /> <input
+                                        type="text" name="phno_2" placeholder="Alternate Contact No." />
+                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next Step" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class=" mx-auto">
+                                            <div class="bg-white rounded-lg shadow-sm p-5">
+                                                <!-- Credit card form tabs -->
+                                                <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                                                    <li class="nav-item">
+                                                        <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                                                            <i class="fa fa-credit-card"></i> Credit Card
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                                                            <i class="fa fa-paypal"></i> Paypal
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                                                            <i class="fa fa-university"></i> Others
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <!-- End -->
+
+
+                                                <!-- Credit card form content -->
+                                                <div class="tab-content">
+
+                                                    <!-- credit card info-->
+                                                    <div id="nav-tab-card" class="tab-pane fade show active">
+
+                                                        <form role="form">
+                                                            <div class="form-group">
+                                                                <label for="username">Full name (on the card)</label>
+                                                                <input type="text" name="username" placeholder="Jason Doe" required class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="cardNumber">Card number</label>
+                                                                <div class="input-group">
+                                                                    <input type="text" name="cardNumber" placeholder="Your card number" class="form-control" required>
+                                                                    <div class="input-group-append">
+                                                                        <span class="input-group-text text-muted">
+                                                                                      <i class="fa fa-cc-visa mx-1"></i>
+                                                                                      <i class="fa fa-cc-amex mx-1"></i>
+                                                                                      <i class="fa fa-cc-mastercard mx-1"></i>
+                                                                                  </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-8">
+                                                                    <div class="form-group">
+                                                                        <label><span class="hidden-xs">Expiration</span></label>
+                                                                        <div class="input-group">
+                                                                            <input type="number" placeholder="MM" name="" class="form-control" required>
+                                                                            <input type="number" placeholder="YY" name="" class="form-control" required>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="form-group mb-4">
+                                                                        <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                                                                      <i class="fa fa-question-circle"></i>
+                                                                                  </label>
+                                                                        <input type="text" required class="form-control">
+                                                                    </div>
+                                                                </div>
+
+
+
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+                                                    <!-- End -->
+
+                                                    <!-- Paypal info -->
+                                                    <div id="nav-tab-paypal" class="tab-pane fade">
+                                                        <p>Paypal is easiest way to pay online</p>
+                                                        <p>
+                                                            <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i> Log into my Paypal</button>
+                                                        </p>
+                                                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                        </p>
+                                                    </div>
+                                                    <!-- End -->
+
+                                                    <!-- bank transfer info -->
+                                                    <div id="nav-tab-bank" class="tab-pane fade">
+                                                        <p>hello you can come to our company </p>
+
+                                                    </div>
+                                                    <!-- End -->
+                                                </div>
+                                                <!-- End -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="pixels.html">
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
+                                </a>
+                            </fieldset>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</div>
+<!-- Core JavaScript
+================================================== -->
+<script src="js/jquery.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+    $(document).ready(function() {
+
+        var current_fs, next_fs, previous_fs; //fieldsets
+        var opacity;
+
+        $(".next").click(function() {
+
+            current_fs = $(this).parent();
+            next_fs = $(this).parent().next();
+
+            //Add Class Active
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+            //show the next fieldset
+            next_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({
+                opacity: 0
+            }, {
+                step: function(now) {
+                    // for making fielset appear animation
+                    opacity = 1 - now;
+
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    next_fs.css({
+                        'opacity': opacity
+                    });
+                },
+                duration: 600
+            });
+        });
+
+        $(".previous").click(function() {
+
+            current_fs = $(this).parent();
+            previous_fs = $(this).parent().prev();
+
+            //Remove class active
+            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+            //show the previous fieldset
+            previous_fs.show();
+
+            //hide the current fieldset with style
+            current_fs.animate({
+                opacity: 0
+            }, {
+                step: function(now) {
+                    // for making fielset appear animation
+                    opacity = 1 - now;
+
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    previous_fs.css({
+                        'opacity': opacity
+                    });
+                },
+                duration: 600
+            });
+        });
+
+        $('.radio-group .radio').click(function() {
+            $(this).parent().find('.radio').removeClass('selected');
+            $(this).addClass('selected');
+        });
+
+        $(".submit").click(function() {
+            return false;
+        })
+
+    });
+</script>
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+{% endblock %}
