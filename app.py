@@ -20,21 +20,36 @@ def index():
     if not session.get("user_id", None):
         return redirect("/login")
     else:
-        brands = DB.execute("SELECT * from brands order by review desc")
+        brands = DB.execute("""
+        select a.brandname, a.img_path, a.desc, s.section_name
+        from brands a, sections s
+        where a.id in (select b.id from brands b where a.section_id = b.section_id order by review limit 1 )
+        and a.section_id = s.id;
+        """)
         sections = DB.execute("SELECT section_name from sections order by section_name desc limit 5")
         top_brands = DB.execute("""
-        select brands.id, brands.brandname, brands.img_path, brands.desc, sections.section_name
-        from brands 
-        JOIN sections on brands.section_id = sections.id
-        JOIN (SELECT min(id)+4 AS id, section_id from brands group by section_id) t1
-        on brands.section_id = t1.section_id 
-        and brands.id < t1.id
+        select a.brandname, a.img_path, a.desc, s.section_name
+        from brands a, sections s
+        where a.id in (select b.id from brands b where a.section_id = b.section_id limit 4 )
+        and a.section_id = s.id
         """)
         top_pixel = DB.execute("""       
         select brands.desc, brands.img_path
         from brands 
         order by review 
         limit 12
+        """)
+        top_pixel_visiting = DB.execute("""       
+        select brands.desc, brands.img_path
+        from brands 
+        order by visiting 
+        limit 8
+        """)
+        top_pixel_likes = DB.execute("""       
+        select brands.desc, brands.img_path
+        from brands 
+        order by likes 
+        limit 3
         """)
         print(sections)
         print(top_brands)
@@ -44,7 +59,9 @@ def index():
         brands = brands, 
         sections = sections, 
         top_brands = top_brands, 
-        top_pixel = top_pixel
+        top_pixel = top_pixel,
+        likes = top_pixel_likes,
+        visits = top_pixel_visiting
         )
 
 
