@@ -198,9 +198,20 @@ def services():
     return render_template("/services.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=['GET','POST'])
 def contact():
-    return render_template("/contact.html")
+    if not session.get("user_id", None):
+        return redirect("/login")
+
+    if request.method == "POST":
+        name = request.form.get("name", None)
+        email = request.form.get("email", None)
+        phone_number = request.form.get("phone_number", None)
+        subject = request.form.get("subject", None)
+        message = request.form.get("mess", None)
+
+    else:
+        return render_template("/contact.html")
 
 
 @app.route("/pixels")
