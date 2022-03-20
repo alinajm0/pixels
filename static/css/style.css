@@ -38,7 +38,7 @@
         h4,
         h5,
         h6 {
-            font-weight: 700;
+            font-weight: 500;
             color: #111111;
         }
         
@@ -53,36 +53,36 @@
         }
         
         h1 {
-            font-size: 32px;
+            font-size: 30px;
             line-height: 40px;
         }
         
         h2 {
-            font-size: 27px;
+            font-size: 25px;
             line-height: 38px;
             margin-bottom: 20px
         }
         
         h3 {
-            font-size: 22px;
+            font-size: 20px;
             line-height: 30px;
             margin-bottom: 17px
         }
         
         h4 {
-            font-size: 19px;
+            font-size: 17px;
             line-height: 29px;
             margin-bottom: 14px
         }
         
         h5 {
-            font-size: 17px;
+            font-size: 15px;
             line-height: 25px;
             margin-bottom: 11px
         }
         
         h6 {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 24px;
             margin-bottom: 11px
         }
@@ -98,7 +98,7 @@
         
         p {
             margin-bottom: 26px;
-            font-size: 15px;
+            font-size: 13px;
             line-height: 26px;
         }
         
@@ -280,13 +280,17 @@ About
         }
         
         .navbar-toggleable-md .navbar-nav .nav-link {
-            padding-left: 0.8rem;
-            padding-right: 0.8rem;
+            padding-left: 0.6rem;
+            padding-right: 0.6rem;
         }
         
         .header-section {
-            padding: 1rem 0 1.5rem;
+            padding: 1rem 1.5rem;
             background-color: #ffffff;
+        }
+        
+        .navbar {
+            margin-right: 60px;
         }
         
         .navbar-nav {
@@ -297,7 +301,7 @@ About
             padding: 0;
             box-shadow: none;
             border-radius: 0;
-            min-width: 240px;
+            min-width: 250px;
             margin-top: 1px !important;
             border-color: #edeff2;
         }
@@ -307,7 +311,7 @@ About
         }
         
         .header .dropdown-item {
-            font-weight: 400;
+            font-weight: 300;
             text-transform: capitalize;
             font-size: 14px;
             padding: 1px 1rem;
@@ -342,7 +346,7 @@ About
             display: block;
             position: relative;
             background-color: #ffffff;
-            padding: 0.5rem 0.6rem 0 0.6rem;
+            padding: 0.4rem 0.3rem 0 0.3rem;
             font-size: 14px;
             border-bottom: 1px dashed #e2e2e2;
         }
@@ -366,11 +370,11 @@ About
         }
         
         .topbar-section .list-inline-item {
-            padding: 0 0.4rem !important;
+            padding: 0 0.2rem !important;
         }
         
         .topmenu i {
-            padding-right: 0.3rem;
+            padding-right: 0.1rem;
         }
         
         .menu-large {
@@ -396,7 +400,7 @@ About
         }
         
         .tab-details {
-            padding: 2rem 0;
+            padding: 1rem 0;
         }
         
         .tab-details .blog-meta h4 {
@@ -503,7 +507,7 @@ About
 **************************************/
         
         .section {
-            padding: 3rem 0;
+            padding: 0.3rem 0;
             display: block;
             position: relative;
             background-color: #ffffff;
@@ -682,6 +686,13 @@ About
         }
         
         .masonry-box .blog-meta span {
+            background-color: #111111;
+            border-radius: 3px;
+            font-size: 12px;
+            padding: 0.1rem 1rem;
+        }
+        
+        .blog-meta span {
             background-color: #111111;
             border-radius: 3px;
             font-size: 12px;
@@ -1029,6 +1040,11 @@ About
             margin: 0;
         }
         
+        hr.invis4 {
+            border: 0;
+            margin: 0.9rem 0;
+        }
+        
         .post-media {
             position: relative;
             overflow: hidden;
@@ -1041,9 +1057,9 @@ About
             left: 0;
             right: 0;
             bottom: 0;
-            background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 30%);
-            background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 30%);
-            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 30%);
+            background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1.5) 0%, rgba(0, 0, 0, 0.1) 20%);
+            background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1, 5) 0%, rgba(0, 0, 0, 0.1) 40%);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1.5) 0%, rgba(0, 0, 0, 0.4) 60%);
             filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000', GradientType=1);
             -webkit-transition: all .3s ease-in-out;
             -moz-transition: all .3s ease-in-out;
@@ -1057,7 +1073,7 @@ About
             transform: scale(1);
             zoom: 1;
             filter: alpha(opacity=100);
-            opacity: 1;
+            opacity: 0.98;
         }
         
         .shadow-desc {
@@ -1097,9 +1113,9 @@ About
             zoom: 1;
             filter: alpha(opacity=0);
             opacity: 0.5;
-            background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 50%);
-            background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 50%);
-            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 50%);
+            background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 20%);
+            background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 20%);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 20%);
             filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000', GradientType=1);
         }
         
@@ -1117,10 +1133,6 @@ About
             filter: alpha(opacity=100);
             opacity: 1;
             top: 45%;
-        }
-        
-        .hovereffect span.videohover::before {
-            content: url(images/videohover.png);
         }
         
         .blog-list .blog-meta.big-meta h4 {
@@ -1168,10 +1180,6 @@ About
             padding: 1rem 0;
             font-size: 24px;
         }
-        
-        .blog-video-system .btn {
-            margin-top: 1rem;
-        }
         /* WIDGETS 
 **************************************/
         
@@ -1199,9 +1207,6 @@ About
         }
         
         .dmtop {
-            background-color: #111111;
-            background-image: url(images/arrow.png);
-            background-position: 50% 50%;
             background-repeat: no-repeat;
             z-index: 9999;
             width: 40px;
@@ -1379,9 +1384,14 @@ About
         
         .card-block {
             -moz-box-flex: 1;
+            margin: 0 8px;
             background: #202020 none repeat scroll 0 0;
-            padding: 1.25rem 3rem;
+            padding: 1.25rem 2.5rem;
             border-radius: 0 !important;
+        }
+        
+        .widget a:hover {
+            opacity: 0.8;
         }
         
         .top-search .btn:hover,
@@ -1486,9 +1496,12 @@ About
             background-color: #dadada;
         }
         
+        .btn2 {
+            padding: 0.8rem 1rem;
+        }
+        
         .btn:hover {
             box-shadow: 0 0 0 1px white, 0 0 0 2px #E8918F;
-            background-color: #00B6F1;
         }
         
         .link-widget li {
@@ -1556,49 +1569,59 @@ About
         }
         
         .carousel {
-            padding: 0px 70px;
+            padding: 0px 65px;
             margin-top: 20px;
         }
         
         .carousel .item {
             color: #747d89;
-            height: 400px;
+            height: 320px;
             text-align: center;
             overflow: hidden;
             margin-top: 10px;
         }
         
         .carousel .thumb-wrapper {
-            padding: 25px 15px;
+            padding: 20px 1px;
             background: #fff;
             border-radius: 6px;
             text-align: center;
             position: relative;
-            height: 300px;
-            width: 280px;
+            height: 240px;
+            width: 230px;
             overflow: hidden;
-            border: rgb(57, 57, 63) 0.5px solid;
+            border: rgb(57, 57, 63) 0.3px solid;
         }
         
         .carousel .item .img-box {
-            height: 190px;
+            height: 180px;
             width: 100%;
             position: relative;
         }
         
+        .carousel .item .img-box:hover img {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+            margin-top: 2px;
+        }
+        
         .carousel .item img {
-            max-width: 100%;
             max-height: 100%;
             display: inline-block;
             position: absolute;
             bottom: 0;
-            margin: 0 auto;
+            margin: 10px auto;
             left: 0;
             right: 0;
             z-index: 0;
+            border-radius: 6px;
         }
         
         .carousel .item h4 {
+            margin-top: 2px;
             font-size: 18px;
         }
         
@@ -1729,11 +1752,6 @@ About
         .star-rating i {
             font-size: 14px;
             color: #ffc000;
-        }
-        
-        .x1 {
-            margin: 10px 130px 0px 110px;
-            padding: 10px;
         }
         
         .c1 .wish-icon {
@@ -2111,12 +2129,18 @@ Footer Style
         }
         
         footer .footer-item ul li a {
-            font-size: 15px;
+            font-size: 14px;
             color: #afafaf;
             transition: all .3s;
         }
         
-        footer .footer-item .navbar-nav ul li a:hover {
+        footer .footer-item ul li a {
+            font-size: 14px;
+            color: #afafaf;
+            transition: all .3s;
+        }
+        
+        footer .footer-item .navbar-nav li a:hover {
             color: #ff695f;
         }
         
@@ -2140,10 +2164,6 @@ Footer Style
             font-size: 14px;
             padding: 0px 20px;
             outline: none;
-        }
-        
-        footer .footer-item form input::placeholder {
-            color: #fff;
         }
         
         footer .footer-item form button {
