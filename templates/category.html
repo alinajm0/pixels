@@ -1,384 +1,2567 @@
-{% extends "layout.html"%}
-{% block content %}
+{% extends "layout.html"%} {% block content %}
 <!-- end page-title -->
+
 
 <section class="section wb">
     <div class="container section2">
         <div class="row">
             <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-                <div class="page-wrapper">
-                    <div class="row">
-
-                    </div>
-                    <!-- end row -->
 
 
+                <div class="nav-pills ">
+                    <button class="w3-bar-item w3-button btn btn2 tablink color-pink" onclick="openCity(event,'ALL')">All</button>
+                    <button class="w3-bar-item w3-button btn tablink" onclick="openCity(event,'Beauty')">Beauty</button>
+                    <button class="w3-bar-item w3-button btn tablink" onclick="openCity(event,'Fashion')">Fashion</button>
+                    <button class="w3-bar-item w3-button btn tablink" onclick="openCity(event,'Furnitures')">Furnitures</button>
+                    <button class="w3-bar-item w3-button btn tablink" onclick="openCity(event,'Tecnology')">Tecnology</button>
+                    <button class="w3-bar-item w3-button btn tablink" onclick="openCity(event,'handmade')">Hand made</button>
+                    <button class="w3-bar-item w3-button btn tablink" onclick="openCity(event,'Food')">Food</button>
+                    <button class="w3-bar-item w3-button btn tablink" onclick="openCity(event,'Others')">Others</button>
+                </div>
 
-                    <div class="blog-grid-system">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_01.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                            <div class="shadoweffect ">
-                                                <div class="shadoweffect ">
-                                                    <div class="shadow-desc ">
-                                                        <div class="blog-meta ">
-                                                            <h4><a href="single.html " title=" "> Shop name</a></h4>
-                                                        </div>
-                                                        <!-- end meta -->
-                                                    </div>
-                                                    <!-- end shadow-desc -->
+                <hr class="invis4">
+
+
+                <div id="ALL" class="cat">
+                    <div class="page-wrapper">
+
+                        <div class="blog-grid-system">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
                                                 </div>
-                                                <!-- end shadow -->
-                                            </div>
-                                            <!-- end shadow -->
-                                        </a>
-                                    </div>
-                                    <!-- end media -->
+                                                <!-- end hover -->
 
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_02.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_03.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_04.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_05.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_06.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_07.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_08.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
+                                            </a>
                                             <div class="shadoweffect ">
                                                 <div class="shadow-desc ">
                                                     <div class="blog-meta ">
-                                                        <h4><a href="single.html " title=" ">Shop name</a></h4>
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">5 places you should see</a></h4>
+
+
                                                     </div>
                                                     <!-- end meta -->
                                                 </div>
                                                 <!-- end shadow-desc -->
                                             </div>
-                                            <!-- end shadow -->
-                                        </a>
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_09.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
                                         </div>
-                                        <!-- end shadow -->
+                                        <!-- end media -->
+
                                     </div>
-                                    <!-- end media -->
-
+                                    <!-- end blog-box -->
                                 </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
+                                <!-- end col -->
 
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_10.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
                                                 </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
 
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
 
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_11.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
+                                                    </div>
+                                                    <!-- end meta -->
                                                 </div>
-                                                <!-- end meta -->
+                                                <!-- end shadow-desc -->
                                             </div>
-                                            <!-- end shadow-desc -->
                                         </div>
-                                        <!-- end shadow -->
+                                        <!-- end media -->
+
                                     </div>
-                                    <!-- end media -->
-
+                                    <!-- end blog-box -->
                                 </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
+                                <!-- end col -->
 
-                            <div class="col-md-6">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="upload/blog_travel_12.jpg" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <h4><a href="single.html " title=" ">Shop name</a></h4>
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
                                                 </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
 
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
                                 </div>
-                                <!-- end blog-box -->
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                                <div class="shadoweffect ">
+                                                    <div class="shadow-desc ">
+                                                        <div class="blog-meta ">
+                                                            <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                        </div>
+                                                        <!-- end meta -->
+                                                    </div>
+                                                    <!-- end shadow-desc -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Travel</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+
                             </div>
-                            <!-- end col -->
+                            <!-- end row -->
                         </div>
-                        <!-- end row -->
+                        <!-- end blog-grid-system -->
                     </div>
-                    <!-- end blog-grid-system -->
+                    <!-- end page-wrapper -->
+
                 </div>
-                <!-- end page-wrapper -->
+                <div id="Beauty" class=" cat" style="display:none">
+                    <div class="page-wrapper">
+
+                        <div class="blog-grid-system">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png " alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                                <div class="shadoweffect ">
+                                                    <div class="shadow-desc ">
+                                                        <div class="blog-meta ">
+                                                            <span class="bg-pink "><a href="blog-category.html " title=" ">beauty</a></span>
+                                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                        </div>
+                                                        <!-- end meta -->
+                                                    </div>
+                                                    <!-- end shadow-desc -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">beauty</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end blog-grid-system -->
+                    </div>
+                    <!-- end page-wrapper -->
+                </div>
+                <div id="Fashion" class=" cat" style="display:none">
+                    <div class="page-wrapper">
+
+                        <div class="blog-grid-system">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">5 places you should see</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                                <div class="shadoweffect ">
+                                                    <div class="shadow-desc ">
+                                                        <div class="blog-meta ">
+                                                            <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                        </div>
+                                                        <!-- end meta -->
+                                                    </div>
+                                                    <!-- end shadow-desc -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end blog-grid-system -->
+                    </div>
+                    <!-- end page-wrapper -->
+
+                </div>
+                <div id="Furnitures" class=" cat" style="display:none">
+                    <div class="page-wrapper">
+
+                        <div class="blog-grid-system">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                                <div class="shadoweffect ">
+                                                    <div class="shadow-desc ">
+                                                        <div class="blog-meta ">
+                                                            <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                        </div>
+                                                        <!-- end meta -->
+                                                    </div>
+                                                    <!-- end shadow-desc -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Furnitures</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end blog-grid-system -->
+                    </div>
+                    <!-- end page-wrapper -->
+                </div>
+                <div id="Tecnology" class=" cat" style="display:none">
+                    <div class="page-wrapper">
+
+                        <div class="blog-grid-system">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                                <div class="shadoweffect ">
+                                                    <div class="shadow-desc ">
+                                                        <div class="blog-meta ">
+                                                            <span class="bg-pink "><a href="./category.html " title=" ">Tecnology</a></span>
+                                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                        </div>
+                                                        <!-- end meta -->
+                                                    </div>
+                                                    <!-- end shadow-desc -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Tecnology</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end blog-grid-system -->
+                    </div>
+                    <!-- end page-wrapper -->
+
+                </div>
+                <div id="handmade" class=" cat" style="display:none">
+                    <div class="page-wrapper">
+
+                        <div class="blog-grid-system">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                                <div class="shadoweffect ">
+                                                    <div class="shadow-desc ">
+                                                        <div class="blog-meta ">
+                                                            <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                        </div>
+                                                        <!-- end meta -->
+                                                    </div>
+                                                    <!-- end shadow-desc -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">handmade</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end blog-grid-system -->
+                    </div>
+                    <!-- end page-wrapper -->
+
+                </div>
+                <div id="Food" class=" cat" style="display:none">
+                    <div class="page-wrapper">
+
+                        <div class="blog-grid-system">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                                <div class="shadoweffect ">
+                                                    <div class="shadow-desc ">
+                                                        <div class="blog-meta ">
+                                                            <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                        </div>
+                                                        <!-- end meta -->
+                                                    </div>
+                                                    <!-- end shadow-desc -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Food</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end blog-grid-system -->
+                    </div>
+                    <!-- end page-wrapper -->
+
+                </div>
+                <div id="Others" class=" cat" style="display:none">
+                    <div class="page-wrapper">
+
+                        <div class="blog-grid-system">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name  </a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                        <h4><a href="single.html " title=" ">5 places you should see</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                                <div class="shadoweffect ">
+                                                    <div class="shadow-desc ">
+                                                        <div class="blog-meta ">
+                                                            <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                        </div>
+                                                        <!-- end meta -->
+                                                    </div>
+                                                    <!-- end shadow-desc -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Travel</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="single.html" title="">
+                                                <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div>
+                                                <!-- end hover -->
+                                            </a>
+                                            <div class="shadoweffect ">
+                                                <div class="shadow-desc ">
+                                                    <div class="blog-meta ">
+                                                        <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                                        <h4><a href="single.html " title=" ">Shop Name</a></h4>
+
+
+                                                    </div>
+                                                    <!-- end meta -->
+                                                </div>
+                                                <!-- end shadow-desc -->
+                                            </div>
+                                        </div>
+                                        <!-- end media -->
+
+                                    </div>
+                                    <!-- end blog-box -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end blog-grid-system -->
+                    </div>
+                    <!-- end page-wrapper -->
+
+                </div>
+
+
+
+
 
                 <hr class="invis3">
 
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination justify-content-start">
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- end col -->
+                <div class="demo text-center m-3 ">
+                    <nav class="pagination-outer " aria-label="Page navigation ">
+                        <ul class="pagination ">
+                            <li class="page-item ">
+                                <a href="# " class="page-link " aria-label="Previous ">
+                                    <span aria-hidden="true ">Prev</span>
+                                </a>
+                            </li>
+                            <li class="page-item "><a class="page-link " href="# ">1</a></li>
+                            <li class="page-item  "><a class="page-link " href="# ">2</a></li>
+                            <li class="page-item "><a class="page-link " href="# ">3</a></li>
+                            <li class="page-item "><a class="page-link " href="# ">4</a></li>
+                            <li class="page-item "><a class="page-link " href="# ">5</a></li>
+                            <li class="page-item ">
+                                <a href="# " class="page-link " aria-label="Next ">
+                                    <span aria-hidden="true ">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <!-- end row -->
             </div>
             <!-- end col -->
 
@@ -391,7 +2574,14 @@
                             <div class="list-group">
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 justify-content-between">
-                                        <img src="upload/blog_square_01.jpg" alt="" class="img-fluid float-left">
+                                        <img src="../static/images/instagram-02.jpg" alt="" class="img-fluid float-left">
+                                        <h5 class="mb-1">Let's make an introduction for creative life</h5>
+
+                                    </div>
+                                </a>
+                                <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="w-100 justify-content-between">
+                                        <img src="../static/images/instagram-01.jpg" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
 
                                     </div>
@@ -399,7 +2589,7 @@
 
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 justify-content-between">
-                                        <img src="upload/blog_square_02.jpg" alt="" class="img-fluid float-left">
+                                        <img src="../static/images/instagram-01.jpg" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">Let's make an introduction for creative life</h5>
 
                                     </div>
@@ -407,12 +2597,13 @@
 
                                 <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="upload/blog_square_03.jpg" alt="" class="img-fluid float-left">
+                                        <img src="../static/images/instagram-01.jpg" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">Did you see the most beautiful sea in the world?</h5>
 
                                     </div>
                                 </a>
-                                <br>
+
+
                             </div>
                         </div>
                         <!-- end blog-list -->
@@ -423,17 +2614,18 @@
                         <h2 class="widget-title">Advertising</h2>
                         <div class="banner-spot clearfix">
                             <div class="banner-img">
-                                <img src="upload/banner_03.jpg" alt="" class="img-fluid">
+                                <img src="../static/images/baner-right-image-01.jpg" alt="" class="img-fluid">
                             </div>
                             <!-- end banner-img -->
                         </div>
                         <!-- end banner -->
                     </div>
+                    <!-- end widget -->
                     <div class="widget">
                         <h2 class="widget-title">Advertising</h2>
                         <div class="banner-spot clearfix">
                             <div class="banner-img">
-                                <img src="upload/banner_03.jpg" alt="" class="img-fluid">
+                                <img src="../static/images/baner-right-image-02.jpg" alt="" class="img-fluid">
                             </div>
                             <!-- end banner-img -->
                         </div>
@@ -444,51 +2636,38 @@
                     <div class="widget">
                         <h2 class="widget-title">Facebook Feed</h2>
                         <div class="instagram-wrapper clearfix">
-                            <a class="" href="#"><img src="upload/insta_01.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_02.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_03.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_04.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_05.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_06.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_07.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_08.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_09.jpeg" alt="" class="img-fluid"></a>
+                            <a class="" href="#"><img src="../static/imags/insta-0.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-1.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-2.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-3.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-4.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-5.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-6.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/images/instagram-06.jpg" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/images/instagram-02.jpg" alt="" class="img-fluid"></a>
                         </div>
                         <!-- end Instagram wrapper -->
                     </div>
+                    <!-- end widget -->
                     <div class="widget">
                         <h2 class="widget-title">Instagram Feed</h2>
                         <div class="instagram-wrapper clearfix">
-                            <a class="" href="#"><img src="upload/insta_01.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_02.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_03.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_04.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_05.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_06.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_07.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_08.jpeg" alt="" class="img-fluid"></a>
-                            <a href="#"><img src="upload/insta_09.jpeg" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="./imags/insta-5.png" alt="" class="img-fluid"></a>
+                            <a class="" href="#"><img src="../static/imags/insta-0.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-1.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-2.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-6.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-3.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-4.png" alt="" class="img-fluid"></a>
+
+
+                            <a href="#"><img src="../static/imags/insta-3.png" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="../static/imags/insta-2.png" alt="" class="img-fluid"></a>
                         </div>
                         <!-- end Instagram wrapper -->
                     </div>
                     <!-- end widget -->
 
-                    <div class="widget">
-                        <h2 class="widget-title">Popular Categories</h2>
-                        <div class="link-widget">
-                            <ul>
-                                <li><a href="#">Fahsion <span>(21)</span></a></li>
-                                <li><a href="#">Lifestyle <span>(15)</span></a></li>
-                                <li><a href="#">Art & Design <span>(31)</span></a></li>
-                                <li><a href="#">Health Beauty <span>(22)</span></a></li>
-                                <li><a href="#">Clothing <span>(66)</span></a></li>
-                                <li><a href="#">Food & Drink <span>(11)</span></a></li>
-                                <li><a href="#"> Others<span>(87)</span></a></li>
-                            </ul>
-                        </div>
-                        <!-- end link-widget -->
-                    </div>
-                    <!-- end widget -->
 
                 </div>
                 <!-- end sidebar -->
@@ -501,4 +2680,20 @@
 </section>
 
 
+
+<script>
+    function openCity(evt, cat1) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("cat");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" color-pink", "");
+        }
+        document.getElementById(cat1).style.display = "block";
+        evt.currentTarget.className += " color-pink";
+    }
+</script>
 {% endblock %}
