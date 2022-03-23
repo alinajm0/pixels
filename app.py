@@ -1,6 +1,6 @@
 from fileinput import filename
 from genericpath import isdir
-from flask import Flask, render_template, request, redirect, flash,session
+from flask import Flask, render_template, request, redirect, flash,session, url_for
 from cs50 import SQL
 from flask_session import Session
 import os
@@ -224,13 +224,16 @@ def pixels():
 
 @app.route("/single/<id>", methods=['GET','POST'])    
 def single(id):
+    print(id)
     if not session.get("user_id", None):
         return redirect("/login")
 
     brand = DB.execute("""
         select * from brands where id = ?
         """, id)
-
+    print("==================")
+    print(brand)
+    print("==================")
     return render_template("single.html", 
         brand = brand
         )
@@ -238,22 +241,26 @@ def single(id):
 
 @app.route("/review/<brand_id>", methods=['GET','POST'])
 def review(brand_id):
+    print(brand_id)
     if not session.get("user_id", None):
         return redirect("/login")
 
     if request.method == "POST":
         comment = request.form.get("comment", None)
         section_id = DB.execute("""
-            select sectio_id from brands where id = ?
+            select section_id from brands where id = ?
             """, brand_id)
+
+        print(section_id)
         row = DB.execute("""
         insert into operations (user_id, brand_id, section_id, type, desc) 
-        VALUES (?, ?, ?, ?, ?)""", session["user_id"], brand_id, section_id, 'review', comment)
+        VALUES (?, ?, ?, 'review', ?)""", session["user_id"], brand_id, section_id[0]['section_id'], comment)
         flash("Response sent successfully", "success")
-        return render_template("/single.html")
+        return redirect(url_for('single', id = brand_id))
 
     else:
-        return render_template("/single.html")
+        flash("Response Not sent", "danger")
+        return redirect(url_for('single', id = brand_id))
 
 
 if __name__ == '__main__':
