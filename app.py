@@ -12,7 +12,7 @@ app.config['SESSION_PERMANENT'] = False
 app.config['SESSION_TYPE'] = "filesystem"
 Session(app)
 
-sections = DB.execute("SELECT section_name from sections order by section_name desc")
+sections = DB.execute("SELECT id, section_name from sections order by section_name desc")
 
 
 @app.route("/")
@@ -21,20 +21,20 @@ def index():
         return redirect("/login")
     else:
         brands = DB.execute("""
-        select a.brandname, a.img_path, a.desc, s.section_name
+        select a.id, a.brandname, a.img_path, a.desc, s.section_name
         from brands a, sections s
         where a.id in (select b.id from brands b where a.section_id = b.section_id order by review limit 1 )
         and a.section_id = s.id;
         """)
-        sections = DB.execute("SELECT section_name from sections order by section_name desc limit 5")
+        sections = DB.execute("SELECT id, section_name from sections order by section_name desc limit 5")
         top_brands = DB.execute("""
-        select a.brandname, a.img_path, a.desc, s.section_name
+        select a.id, a.brandname, a.img_path, a.desc, s.section_name
         from brands a, sections s
         where a.id in (select b.id from brands b where a.section_id = b.section_id limit 4 )
         and a.section_id = s.id
         """)
         top_pixel = DB.execute("""       
-        select brands.desc, brands.img_path
+        select brands.id, brands.desc, brands.img_path
         from brands 
         order by review 
         limit 12
@@ -51,9 +51,6 @@ def index():
         order by likes 
         limit 3
         """)
-        print(sections)
-        print(top_brands)
-        print(top_pixel)
         render_template("buy-Pixel.html", sections = sections)
         return render_template("index.html", 
         brands = brands, 
@@ -172,11 +169,6 @@ def buy_pixel():
 
     
 
-@app.route("/review")
-def review():
-    if not session.get("user_id", None):
-        return redirect("/lognin")
-
 @app.route("/delete")
 def delete():
     if not session.get("user_id", None):
@@ -210,6 +202,17 @@ def contact():
         subject = request.form.get("subject", None)
         message = request.form.get("mess", None)
 
+        if not name or not email or not phone_number or not subject or not message:
+            flash("Please Fill all Filds", "danger")
+            return redirect("/contact.html")
+
+        row = DB.execute("""
+        insert into feedback (user_id, name, email, phone, subject, mess) 
+        VALUES (?, ?, ?, ?, ?, ?)""", session["user_id"], name, email, phone_number, subject, message)
+        flash("Response sent successfully", "success")
+        return render_template("/contact.html")
+
+
     else:
         return render_template("/contact.html")
 
@@ -219,10 +222,39 @@ def pixels():
     return render_template("/pixels.html")
 
 
-@app.route("/single")    
-def single():
-    return render_template("/single.html")
-    
+@app.route("/single/<id>", methods=['GET','POST'])    
+def single(id):
+    if not session.get("user_id", None):
+        return redirect("/login")
+
+    brand = DB.execute("""
+        select * from brands where id = ?
+        """, id)
+
+    return render_template("single.html", 
+        brand = brand
+        )
+
+
+@app.route("/review/<brand_id>", methods=['GET','POST'])
+def review(brand_id):
+    if not session.get("user_id", None):
+        return redirect("/login")
+
+    if request.method == "POST":
+        comment = request.form.get("comment", None)
+        section_id = DB.execute("""
+            select sectio_id from brands where id = ?
+            """, brand_id)
+        row = DB.execute("""
+        insert into operations (user_id, brand_id, section_id, type, desc) 
+        VALUES (?, ?, ?, ?, ?)""", session["user_id"], brand_id, section_id, 'review', comment)
+        flash("Response sent successfully", "success")
+        return render_template("/single.html")
+
+    else:
+        return render_template("/single.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)

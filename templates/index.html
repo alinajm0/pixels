@@ -1,5 +1,4 @@
-{% extends "layout.html"%} 
-{% block content %}
+{% extends "layout.html"%} {% block content %}
 
 <section class="section first-section ">
     {% if brands %}
@@ -7,13 +6,12 @@
         <div class="masonry-blog clearfix ">
             <div class="left-side ">
                 <div class="masonry-box post-media ">
-                    <img src="../static/imags/flower-0.jpg" alt=" " class="img-fluid ">
+                    <img src="../{{ brands[0]['img_path'] }}" alt="" class="img-fluid ">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink "><a href="{{url_for('category')}}" title=" ">Beauty</a></span>
-                                <h4><a href="{{url_for('single')}}" title=" ">{{ brands[0]['desc'] }}</a></h4>
-
+                                <span class="bg-pink"><a href="blog-category.html " title="">{{ brands[0]['section_name'] }}</a></span>
+                                <h4><a href="single.html " title=" ">{{ brands[0]['desc'] }}</a></h4>
                             </div>
                             <!-- end meta -->
                         </div>
@@ -27,11 +25,11 @@
 
             <div class="center-side ">
                 <div class="masonry-box post-media ">
-                    <img src="../static/imags/center-2.jpg" alt=" " class="img-fluid ">
+                    <img src="../{{ brands[1]['img_path'] }}" alt="" class="img-fluid">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink "><a href="blog-category.html " title=" ">Travel</a></span>
+                                <span class="bg-pink "><a href="blog-category.html" title="">{{ brands[1]['section_name'] }}</a></span>
                                 <h4><a href="single.html " title=" ">{{ brands[1]['desc'] }}</a></h4>
 
 
@@ -45,11 +43,11 @@
                 <!-- end post-media -->
 
                 <div class="masonry-box small-box post-media ">
-                    <img src="../static/imags/center-1.jpg" alt=" " class="img-fluid ">
+                    <img src="../{{ brands[2]['img_path'] }}" alt=" " class="img-fluid ">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink "><a href="blog-category.html " title=" ">Fashion</a></span>
+                                <span class="bg-pink "><a href="blog-category.html " title=" ">{{ brands[2]['section_name'] }}</a></span>
                                 <h4><a href="single.html " title=" ">{{ brands[2]['desc'] }}</a></h4>
                             </div>
                             <!-- end meta -->
@@ -61,11 +59,11 @@
                 <!-- end post-media -->
 
                 <div class="masonry-box small-box post-media ">
-                    <img src="..//static/imags/center-0.jpg" alt=" " class="img-fluid ">
+                    <img src="../{{ brands[3]['img_path'] }}" alt=" " class="img-fluid ">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
+                                <span class="bg-pink "><a href="blog-category.html " title=" ">{{ brands[3]['section_name'] }}</a></span>
                                 <h4><a href="single.html " title=" ">{{ brands[3]['desc'] }}</a></h4>
                             </div>
                             <!-- end meta -->
@@ -80,11 +78,11 @@
 
             <div class="right-side hidden-md-down ">
                 <div class="masonry-box post-media ">
-                    <img src="../static/imags/right-0.png" alt=" " class="img-fluid ">
+                    <img src="../{{ brands[4]['img_path'] }}" alt=" " class="img-fluid ">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink "><a href="blog-category.html " title=" ">Favorite</a></span>
+                                <span class="bg-pink "><a href="blog-category.html " title=" ">{{ brands[4]['section_name'] }}</a></span>
                                 <h4><a href="single.html " title=" ">{{ brands[4]['desc'] }}</a></h4>
                             </div>
                             <!-- end meta -->
@@ -102,213 +100,75 @@
     {% endif %}
 </section>
 
-<div class="container">
-    <div class="col-md-12 m-sm-2">
-        <div class="section-heading">
-            <h2>Say Hello <span>To New </span>Visitor<br>
-                <em> Top PIXELS </em></h2>
-        </div>
-    </div>
-</div>
+
 <section class="d-felx hidden-xs-down hidden-md-down hidden-sm-down ">
-    <div class="container">
+    <div class="container-xl ">
         <div class="row x1 ">
+            <div class="col-md-12 ">
+                <h2>TOP <b>PIXELS</b></h2>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                    <!-- Carousel indicators -->
+                    
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item carousel-item active">
+                            <div class="row"> 
+                                {% for pixel in top_pixel %}  
+                                <div class="col-sm-3">
+                                    <div class="thumb-wrapper">
+                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                        <div class="img-box">
+                                            <img src="../{{ pixel['img_path'] }}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="thumb-content">
+                                            <h4>{{ pixel['desc'] }}</h4>
+                                            <div class="star-rating">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                </ul>
+                                            </div>
 
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-                <!-- Carousel indicators -->
-
-                <!-- Wrapper for carousel items -->
-                <div class="carousel-inner">
-                    <div class="item carousel-item active">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="../static/images/baner-right-image-01.jpg" class="img-fluid" alt="Headphone">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Shop Name</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="../static/images/baner-right-image-02.jpg" class="img-fluid" alt="Headphone">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Shop Name</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="../static/images/baner-right-image-03.jpg" class="img-fluid" alt="Macbook">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Shop Name</h4>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="../static/images/baner-right-image-04.jpg" class="img-fluid" alt="Nikon">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Shop Name</h4>
-
-
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
-                    </div>
-                    <div class="item carousel-item">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-
-                                    <div class="img-box">
-                                        <img src="./images/baner-right-image-02.jpg" class="img-fluid" alt="Play Station">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Sony Play Station</h4>
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./images/instagram-02.jpg" class="img-fluid" alt="Macbook">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Macbook Pro</h4>
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./images/instagram-03.jpg" class="img-fluid" alt="Speaker">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Bose Speaker</h4>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./images/instagram-04.jpg" class="img-fluid" alt="Galaxy">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Samsung Galaxy S8</h4>
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item carousel-item">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-
-                                    <div class="img-box">
-                                        <img src="./images/instagram-04.jpg" class="img-fluid" alt="iPhone">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Apple iPhone</h4>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./images/baner-right-image-03.jpg" class="img-fluid" alt="Canon">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Canon DSLR</h4>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./images/instagram-06.jpg" class="img-fluid" alt="Pixel">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Google Pixel</h4>
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="./images/instagram-06.jpg" class="img-fluid" alt="Watch">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h4>Apple Watch</h4>
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                    
+                    <!-- Carousel controls -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 </div>
-                <!-- Carousel controls -->
-                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                    <i class="fa fa-angle-right"></i>
-                </a>
             </div>
         </div>
     </div>
-
 </section>
 
 
 
 
-
 <section class="section wb">
-    <div class="container-fluid ">
-
-        <div class="row justify-content-around">
+    <div class="container">
+        <div class="row">
             <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                 <div class="page-wrapper">
 
                     <div class="blog-grid-system ">
                         <div class="row">
-                            <div class="col-md-4 pb-4">
+                            {% for visit in visits %}
+                            <div class="col-md-6">
                                 <div class="blog-box">
                                     <div class="post-media">
                                         <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
+                                            <img src="../{{ visit['img_path'] }}" width="1100px" height="750px" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
                                             </div>
@@ -317,39 +177,8 @@
                                         <div class="shadoweffect ">
                                             <div class="shadow-desc ">
                                                 <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
 
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
+                                                    <h4><a href="single.html " title="">{{ visit['desc'] }}</a></h4>
 
                                                 </div>
                                                 <!-- end meta -->
@@ -363,328 +192,8 @@
                                 </div>
                                 <!-- end blog-box -->
                             </div>
+                            {% endfor %}
                             <!-- end col -->
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                        </a>
-                                        <!-- end hover -->
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-
-                                    </div>
-                                    <!-- end media -->
-
-                                    <!-- end meta -->
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-
-                                    </div>
-                                    <!-- end media -->
-
-                                    <!-- end meta -->
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-
-                                    </div>
-                                    <!-- end media -->
-
-                                    <!-- end meta -->
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4 pb-4">
-                                <div class="blog-box">
-                                    <div class="post-media">
-                                        <a href="single.html" title="">
-                                            <img src="../static/imags/ads-0.png" alt="" class="img-fluid">
-                                            <div class="hovereffect">
-                                                <span></span>
-                                            </div>
-                                            <!-- end hover -->
-                                        </a>
-                                        <div class="shadoweffect ">
-                                            <div class="shadow-desc ">
-                                                <div class="blog-meta ">
-                                                    <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                                    <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                                </div>
-                                                <!-- end meta -->
-                                            </div>
-                                            <!-- end shadow-desc -->
-                                        </div>
-                                        <!-- end shadow -->
-
-                                    </div>
-                                    <!-- end media -->
-
-                                </div>
-                                <!-- end blog-box -->
-                            </div>
-                            <!-- end col -->
-
 
                         </div>
                         <!-- end row -->
@@ -699,65 +208,29 @@
 
             <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 <div class="sidebar">
-
+                    {% for like in likes %}
                     <div class="widget">
-
                         <div class="blog-box ">
                             <div class="post-media ">
                                 <a href="single.html " title=" ">
-                                    <img src="../static/imags/ads-1.png" alt=" " class="img-fluid ">
-                                    <div class="hovereffect ">
-                                        <span></span>
-                                    </div>
-                                </a>
-                                <!-- end hover -->
-                                <div class="shadoweffect ">
-                                    <div class="shadow-desc ">
-                                        <div class="blog-meta ">
-                                            <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
-
-
-                                        </div>
-                                        <!-- end meta -->
-                                    </div>
-                                    <!-- end shadow-desc -->
-                                </div>
-                                <!-- end shadow -->
-
-                            </div>
-                            <!-- end media -->
-
-                        </div>
-                        <!-- end blog-box -->
-
-
-                    </div>
-                    <div class="widget">
-
-                        <div class="blog-box ">
-                            <div class="post-media ">
-                                <a href="single.html " title=" ">
-                                    <img src="../static/imags/ads-1.png " alt=" " class="img-fluid ">
+                                    <img src="../{{ like['img_path'] }}" width="690px" height="1024px" alt=" " class="img-fluid ">
                                     <div class="hovereffect ">
                                         <span></span>
                                     </div>
                                     <!-- end hover -->
-                                </a>
-                                <div class="shadoweffect ">
-                                    <div class="shadow-desc ">
-                                        <div class="blog-meta ">
-                                            <span class="bg-pink "><a href="blog-category.html " title=" ">Others</a></span>
-                                            <h4><a href="single.html " title=" ">Shop Name</a></h4>
+                                    <div class="shadoweffect ">
+                                        <div class="shadow-desc ">
+                                            <div class="blog-meta ">
 
+                                                <h4><a href="single.html " title=" ">{{ like['desc'] }}</a></h4>
 
+                                            </div>
+                                            <!-- end meta -->
                                         </div>
-                                        <!-- end meta -->
+                                        <!-- end shadow-desc -->
                                     </div>
-                                    <!-- end shadow-desc -->
-                                </div>
-                                <!-- end shadow -->
-
+                                    <!-- end shadow -->
+                                </a>
                             </div>
                             <!-- end media -->
 
@@ -766,7 +239,7 @@
 
 
                     </div>
-
+                    {% endfor %}
                 </div>
                 <!-- end widget -->
 
@@ -789,7 +262,7 @@
                 </a>
             </li>
             <li class="page-item "><a class="page-link " href="# ">1</a></li>
-            <li class="page-item  "><a class="page-link " href="# ">2</a></li>
+            <li class="page-item active "><a class="page-link " href="# ">2</a></li>
             <li class="page-item "><a class="page-link " href="# ">3</a></li>
             <li class="page-item "><a class="page-link " href="# ">4</a></li>
             <li class="page-item "><a class="page-link " href="# ">5</a></li>
@@ -801,6 +274,5 @@
         </ul>
     </nav>
 </div>
-
 
 {% endblock %}

@@ -50,8 +50,8 @@
     <div id="wrapper">
         <div class="topbar-section">
             <div class="container-fluid ">
-                <div class="row  justify-content-between">
-                    <div class="  hidden-md-down hidden-xs-down ">
+                <div class="row justify-content-between">
+                    <div class="  hidden-md-down hidden-xs-down">
                         <div class="social m-3">
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook color-pink-hover"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Youtube"><i class="fa fa-youtube"></i></a>
@@ -65,7 +65,7 @@
                     </div>
                     <!-- end col -->
 
-                    <nav class="navbar navbar-inverse navbar-toggleable-md nav1">
+                    <nav class="navbar navbar-inverse navbar-toggleable-md ">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cloapediamenu" aria-controls="cloapediamenu" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -84,7 +84,7 @@
                     </nav>
                     <!-- end col -->
 
-                    <div class=" hidden-md-down hidden-xs-down m-2  float-left">
+                    <div class=" hidden-md-down hidden-xs-down m-2  ">
                         <form>
                             <div class="text-end ">
                                 {% if not session.get("user_id",None) %}
@@ -104,733 +104,174 @@
         </div>
         <!-- end topbar -->
         <div class="topbar-section">
-
-
-            <!-- end top-search -->
-            <div class="container-fluid ">
-                <div class=" logo m-0  text-center">
-                    <a href="buyPixels.html">
-                        <img src="../static/upload/pp.png" alt="" width="140" height="140">
-                    </a>
-                </div>
-                <header class="header ">
-                    <div class="container ">
-                        <div class="row justify-content-md-center ">
-
-                            <ul class=" navbar-nav mx-2 ">
-
-                                <li class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
-                                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
-                                    <ul class="dropdown-menu megamenu" aria-labelledby="dropdown01">
-                                        <li>
-                                            <div class="mega-menu-content clearfix">
-                                                <div class="tab">
-                                                    <button class="tablinks active" onclick="openCategory(event, 'cat01')"> Beauty</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat02')">Fashion</button>
-
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat03')">Furnitures</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat04')">Tecnology</button>
-
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat05')">Hand Made</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat06')">Food</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat07')">Others</button>
-                                                </div>
-
-                                                <div class="tab-details clearfix">
-                                                    <div id="cat01" class="tabcontent active">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/beauty-0.png" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">care advice for your toenails</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/beauty-1.png" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">The secret of your beauty is handmade soap</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/beauty-2.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Benefits of face mask made</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/beauty-3.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Relax with the unique warmth </a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <div id="cat02" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/fasion-0.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">2017 summer stamp will have design models here</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/fasion-1.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Which color is the most suitable color for you?</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/fasion-2.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Subscribe to these sites to keep an eye on the fashion</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/fasion-3.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">The most trends of this year with color combination</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <div id="cat03" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/furniture-0.jpg" alt="" class="img-fluid">
-
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">I visited the architects of Istanbul for you</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/furniture-1.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Prepared handmade dish dish in the Netherlands</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/fasion-2.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">I recommend you visit the fairy chimneys</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/fasion-3.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">One of the most beautiful ports in the world</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <div id="cat04" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/tecnology-0.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">A collection of the most beautiful shop designs</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/tecnology-1.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">America's and Canada's most beautiful wine houses</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/tecnology-2.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">The most professional ways to color your walls</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/tecnology-2.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Stylish cabinet designs and furnitures</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <div id="cat05" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/hand-made-0.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Grilled vegetable with fish prepared with fish</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/hand-made-1.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">The world's finest and clean meat restaurants</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/hand-made-2.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Fried veal and vegetable dish</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/hand-made-3.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Tasty pasta sauces and recipes</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <div id="cat06" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/food-0.png" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">2017 summer stamp will have design models here</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/food-1.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Which color is the most suitable color for you?</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/food-3.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Subscribe to these sites to keep an eye on the fashion</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/food-2.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">The most trends of this year with color combination</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <div id="cat07" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/food-1.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Grilled vegetable with fish prepared with fish</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/fasion-0.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">The world's finest and clean meat restaurants</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/tecnology-0.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Fried veal and vegetable dish</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="../static/imags/beauty-2.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Tasty pasta sauces and recipes</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                </div>
-                                                <!-- end tab-details -->
-                                            </div>
-                                            <!-- end mega-menu-content -->
-                                        </li>
-                                    </ul>
-                                </li>
-
-                            </ul>
-
-
-
-                            <div class="topsearch hidden-md-down hidden-sm-down hidden-xs-down mt-2  header1 mx-3 ">
-                                <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-search"></i> Search</a>
-                            </div>
-                            <!-- end search -->
-                        </div>
-                    </div>
-                </header>
-                <div class="collapse top-search " id="collapseExample">
-                    <div class="card card-block">
-                        <div class="newsletter-widget text-center">
-                            <form class="form-inline">
-                                <input type="text" class="form-control" placeholder="What you are looking for?">
-                                <button type="submit" class="btn "><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                        <!-- end newsletter -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% block content %} {% endblock %}
-
-    <footer class=" footer mt-5">
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-lg-3 mt-5">
-                    <div class="about footer-item">
-                        <div class="logo">
-                            <a href="buy pixels.html">
-                                <img src="../static/upload/pp.png" alt="" width="100" height="100">
-                            </a>
-                        </div>
-
-                        <div class="social ">
-                            <a href="# " data-toggle="tooltip " data-placement="bottom " title="Facebook "><i class="fa fa-facebook "></i></a>
-                            <a href="# " data-toggle="tooltip " data-placement="bottom " title="Twitter "><i class="fa fa-twitter "></i></a>
-                            <a href="# " data-toggle="tooltip " data-placement="bottom " title="Instagram "><i class="fa fa-instagram "></i></a>
-                            <a href="# " data-toggle="tooltip " data-placement="bottom " title="Google Plus "><i class="fa fa-google-plus "></i></a>
-                            <a href="# " data-toggle="tooltip " data-placement="bottom " title="Pinterest "><i class="fa fa-pinterest "></i></a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-3 mt-4 mb-3">
-                    <div class="services footer-item">
-                        <h4>Services</h4>
-                        <ul class="navbar-nav">
-
-                            <li><a href="#">SEO Development</a></li>
-                            <li><a href="#">Business Growth</a></li>
-                            <li><a href="#">Social Media Managment</a></li>
-                            <li><a href="#">Website Optimization</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 mt-4 mb-3">
-                    <div class="community footer-item">
-                        <h4>Community</h4>
-                        <ul class="navbar-nav">
-                            <li> <a href="{{url_for('index')}}">HOME</a></li>
-                            <li><a href="{{url_for('services')}}">SERVICES</a></li>
-                            <li><a href="{{url_for('contact')}}">CONTACT</a></li>
-                            <li><a href="{{url_for('pixels')}}">PIXELS</a></li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 mt-4 mb-3">
-                    <div class="subscribe-newsletters footer-item">
-                        <h4>Subscribe Newsletters</h4>
-                        <p>Get our latest news and ideas to your inbox</p>
-                        <form action="#" method="get">
-                            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                            <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
+            <div class="collapse top-search " id="collapseExample">
+                <div class="card card-block">
+                    <div class="newsletter-widget text-center">
+                        <form class="form-inline">
+                            <input type="text" class="form-control" placeholder="What you are looking for?">
+                            <button type="submit" class="btn "><i class="fa fa-search"></i></button>
                         </form>
                     </div>
+                    <!-- end newsletter -->
                 </div>
-
-
             </div>
+
+            <!-- end top-search -->
+
+            <div class=" logo m-0 text-center">
+                <a href="buyPixels.html">
+                    <img src="../static/upload/pp.png" alt="" width="160" height="160">
+                </a>
+            </div>
+            <header class="header ">
+                <div class="container ">
+                    <div class="row justify-content-md-center ">
+
+                        <ul class=" navbar-nav mx-2 ">
+
+                            <li class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                                <ul class="dropdown-menu megamenu" aria-labelledby="dropdown01">
+                                    <li>
+                                        <div class="mega-menu-content clearfix">
+                                            {% for section in sections %}
+                                            <div class="tab">
+                                                <button class="tablinks active" onclick="openCategory(event, '{{ section['section_name'] }}')"> {{section['section_name']}}</button>
+                                            </div>
+
+                                            <div class="tab-details clearfix">
+                                                <div id="{{ section['section_name'] }}" class="tabcontent">
+                                                    <div class="row">
+                                                        {% for brand in top_brands %}
+                                                        {% if section['section_name'] == brand['section_name'] %}
+                                                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                                            <div class="blog-box">
+                                                                <div class="post-media">
+                                                                    <a href="{{url_for('single', id = brand['id'])}}" title="">
+                                                                        <img src="../{{ brand['img_path'] }}" alt="" class="img-fluid">
+                                                                        <div class="hovereffect">
+                                                                        </div>
+                                                                        <!-- end hover -->
+
+                                                                    </a>
+                                                                </div>
+                                                                <!-- end media -->
+                                                                <div class="blog-meta">
+                                                                    <h4><a href="{{url_for('single', id = brand['id'])}}" title="">{{ brand['desc'] }}</a></h4>
+                                                                </div>
+                                                                <!-- end meta -->
+                                                            </div>
+                                                            <!-- end blog-box -->
+                                                        </div>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                    <!-- end row -->
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- end tab-details -->
+                                            {% endfor %}
+                                        </div>
+                                        <!-- end mega-menu-content -->
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+
+
+                        <div class="topsearch hidden-md-down hidden-sm-down hidden-xs-down mt-2  header1 mx-3 ">
+                            <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-search"></i> Search</a>
+                        </div>
+                        <!-- end search -->
+                    </div>
+                </div>
+            </header>
         </div>
-    </footer>
 
-    <div class="dmtop ">Scroll to Top</div>
+        {% block content %} 
+        
+        
+        {% endblock %}
 
-    <!-- Core JavaScript
+        <footer class=" footer mt-5">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-lg-3 mt-5">
+                        <div class="about footer-item">
+                            <div class="logo">
+                                <a href="buy pixels.html">
+                                    <img src="../static/upload/pp.png" alt="" width="100" height="100">
+                                </a>
+                            </div>
+
+                            <div class="social ">
+                                <a href="# " data-toggle="tooltip " data-placement="bottom " title="Facebook "><i class="fa fa-facebook "></i></a>
+                                <a href="# " data-toggle="tooltip " data-placement="bottom " title="Twitter "><i class="fa fa-twitter "></i></a>
+                                <a href="# " data-toggle="tooltip " data-placement="bottom " title="Instagram "><i class="fa fa-instagram "></i></a>
+                                <a href="# " data-toggle="tooltip " data-placement="bottom " title="Google Plus "><i class="fa fa-google-plus "></i></a>
+                                <a href="# " data-toggle="tooltip " data-placement="bottom " title="Pinterest "><i class="fa fa-pinterest "></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mt-4 mb-3">
+                        <div class="services footer-item">
+                            <h4>Services</h4>
+                            <ul class="navbar-nav">
+
+                                <li><a href="#">SEO Development</a></li>
+                                <li><a href="#">Business Growth</a></li>
+                                <li><a href="#">Social Media Managment</a></li>
+                                <li><a href="#">Website Optimization</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mt-4 mb-3">
+                        <div class="community footer-item">
+                            <h4>Community</h4>
+                            <ul class="navbar-nav">
+                                <li class="nav-item"> <a class="nav-link color-pink-hover" href="{{url_for('index')}}">HOME</a></li>
+                                <li class="nav-item"><a href="{{url_for('services')}}" class="nav-link color-pink-hover">SERVICES</a></li>
+                                <li class="nav-item"><a href="{{url_for('contact')}}" class="nav-link color-pink-hover">CONTACT</a></li>
+                                <li class="nav-item"><a href="{{url_for('pixels')}}" class="nav-link color-pink-hover">PIXELS</a></li>
+                                <li class="nav-item"><a href="{{url_for('buy_pixel')}}" class="nav-link color-pink-hover">BUY PIXELS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mt-4 mb-3">
+                        <div class="subscribe-newsletters footer-item">
+                            <h4>Subscribe Newsletters</h4>
+                            <p>Get our latest news and ideas to your inbox</p>
+                            <form action="#" method="get">
+                                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                                <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </footer>
+
+        <div class="dmtop ">Scroll to Top</div>
+
+        <!-- Core JavaScript
     ================================================== -->
-    <script src="../static/js/jquery.min.js "></script>
-    <script src="../static/js/tether.min.js "></script>
-    <script src="../static/js/bootstrap.min.js "></script>
-    <script src="../static/js/custom.js "></script>
-    <script>
-        $(document).ready(function() {
-            $(".wish-icon i ").click(function() {
-                $(this).toggleClass("fa-heart fa-heart-o ");
+        <script src="../static/js/jquery.min.js "></script>
+        <script src="../static/js/tether.min.js "></script>
+        <script src="../static/js/bootstrap.min.js "></script>
+        <script src="../static/js/custom.js "></script>
+        <script>
+            $(document).ready(function() {
+                $(".wish-icon i ").click(function() {
+                    $(this).toggleClass("fa-heart fa-heart-o ");
+                });
             });
-        });
-    </script>
+        </script>
 
 </body>
 
