@@ -37,19 +37,19 @@ def index():
         select brands.id, brands.desc, brands.img_path
         from brands 
         order by review 
-        limit 12
+        limit 4
         """)
         top_pixel_visiting = DB.execute("""       
         select brands.desc, brands.img_path
         from brands 
         order by visiting 
-        limit 8
+        limit 12
         """)
         top_pixel_likes = DB.execute("""       
         select brands.desc, brands.img_path
         from brands 
         order by likes 
-        limit 3
+        limit 2
         """)
         render_template("buy-Pixel.html", sections = sections)
         return render_template("index.html", 
