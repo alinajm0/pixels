@@ -2,11 +2,11 @@
 
 <section class="section first-section ">
     {% if brands %}
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="masonry-blog clearfix ">
             <div class="left-side ">
                 <div class="masonry-box post-media ">
-                    <img src="../{{ brands[0]['img_path'] }}" alt="" class="img-fluid ">
+                    <img src="../{{ brands[0]['img_path'] }}" alt="" height="550" width="250">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
@@ -25,7 +25,7 @@
 
             <div class="center-side ">
                 <div class="masonry-box post-media ">
-                    <img src="../{{ brands[1]['img_path'] }}" alt="" class="img-fluid">
+                    <img src="../{{ brands[1]['img_path'] }}" alt="" height="270" width="250">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
@@ -43,7 +43,7 @@
                 <!-- end post-media -->
 
                 <div class="masonry-box small-box post-media ">
-                    <img src="../{{ brands[2]['img_path'] }}" alt=" " class="img-fluid ">
+                    <img src="../{{ brands[2]['img_path'] }}" alt=" " height="270" width="250">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
@@ -59,7 +59,7 @@
                 <!-- end post-media -->
 
                 <div class="masonry-box small-box post-media ">
-                    <img src="../{{ brands[3]['img_path'] }}" alt=" " class="img-fluid ">
+                    <img src="../{{ brands[3]['img_path'] }}" alt=" " height="270" width="250">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
@@ -78,7 +78,7 @@
 
             <div class="right-side hidden-md-down ">
                 <div class="masonry-box post-media ">
-                    <img src="../{{ brands[4]['img_path'] }}" alt=" " class="img-fluid ">
+                    <img src="../{{ brands[4]['img_path'] }}" alt=" " height="550" width="250">
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
@@ -100,63 +100,90 @@
     {% endif %}
 </section>
 
+<div class="container">
+    <div class="col-md-12 m-sm-2">
+        <div class="section-heading">
+            <h2>Say Hello <span>To New </span>Visitor<br>
+                <em> Top PIXELS </em></h2>
+        </div>
+    </div>
+</div>
 
 <section class="d-felx hidden-xs-down hidden-md-down hidden-sm-down ">
-    <div class="container-xl ">
+    <div class="container ">
         <div class="row x1 ">
-            <div class="col-md-12 ">
-                <h2>TOP <b>PIXELS</b></h2>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-                    <!-- Carousel indicators -->
-                    
-                    <!-- Wrapper for carousel items -->
-                    <div class="carousel-inner">
-                        <div class="item carousel-item active">
-                            <div class="row"> 
-                                {% for pixel in top_pixel %}  
-                                <div class="col-sm-3">
-                                    <div class="thumb-wrapper">
-                                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-                                        <div class="img-box">
-                                            <img src="../{{ pixel['img_path'] }}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="thumb-content">
-                                            <h4>{{ pixel['desc'] }}</h4>
-                                            <div class="star-rating">
-                                                <ul class="list-inline">
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                                </ul>
-                                            </div>
 
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <!-- Carousel indicators -->
+
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item carousel-item active">
+                        <div class="row">
+                            {% for pixel in top_pixel %}
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+
+                                    <div class="img-box">
+                                        <img src="../{{ pixel['img_path'] }}" height="250" width="250" alt="">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>{{ pixel['desc'] }}</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
                                         </div>
+
                                     </div>
                                 </div>
-                                {% endfor %}
                             </div>
+                            {% endfor %}
                         </div>
-                    </div>                    
-                    <!-- Carousel controls -->
-                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
+                    </div>
+                    <div class="item carousel-item ">
+                        <div class="row">
+                            {% for pixel in top_pixel %}
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+
+                                    <div class="img-box">
+                                        <img src="../{{ pixel['img_path'] }}" height="250" width="250" alt="">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>{{ pixel['desc'] }}</h4>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
+                <!-- Carousel controls -->
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
 
 
 
-<section class="section wb">
-    <div class="container">
+<section class="section wb ">
+    <div class="container-fluid ">
+
         <div class="row">
             <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                 <div class="page-wrapper">
@@ -164,11 +191,11 @@
                     <div class="blog-grid-system ">
                         <div class="row">
                             {% for visit in visits %}
-                            <div class="col-md-6">
+                            <div class="col-md-4 pb-4">
                                 <div class="blog-box">
                                     <div class="post-media">
                                         <a href="single.html" title="">
-                                            <img src="../{{ visit['img_path'] }}" width="1100px" height="750px" alt="" class="img-fluid">
+                                            <img src="../{{ visit['img_path'] }}" width="600px" height="260px" alt="">
                                             <div class="hovereffect">
                                                 <span></span>
                                             </div>
@@ -213,7 +240,7 @@
                         <div class="blog-box ">
                             <div class="post-media ">
                                 <a href="single.html " title=" ">
-                                    <img src="../{{ like['img_path'] }}" width="690px" height="1024px" alt=" " class="img-fluid ">
+                                    <img src="../{{ like['img_path'] }}" width="690px" height="545px" alt=" ">
                                     <div class="hovereffect ">
                                         <span></span>
                                     </div>
