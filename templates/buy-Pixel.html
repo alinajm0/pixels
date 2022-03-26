@@ -1,16 +1,291 @@
 {% extends "layout.html"%}
 {% block content %}
-<form action="{{url_for('buy_pixel')}}" method="POST" enctype="multipart/form-data">
-    <input type="text" placeholder="Brand Name" name="name">
-    <input type="number" placeholder="Column" name="column">
-    <input type="number" placeholder="Row" name="row">
-    <select id="section" name="section">
-        {% for section in sections %}
-        <option value="{{section['section_name']}}">{{section['section_name']}}</option>
-        {% endfor %}
-      </select>    
-      <input type="text" placeholder="Description" name="desc">
-    <input type="file" id="img_brand" name="img_brand" accept="image/png, image/jpg">
-    <button type="submit" class="site-btn">Buy Now</button>
-</form>
+
+    <div class="container " id="grad1">
+        <div class="row justify-content-center mt-0">
+            <div class="col-10 col-sm-9 col-md-7 col-lg-6 text-center p-0 mb-2">
+                <div class="card px-0 pt-2 pb-0 mt-1 mb-3">
+                    <h2><strong>buy pixels</strong></h2>
+
+                    <div class="row">
+                        <div class="col-md-12 mx-0">
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account"><strong>Account</strong></li>
+                                    <li id="personal"><strong>Uploads</strong></li>
+                                    <li id="payment"><strong>Payment</strong></li>
+                                    <li id="confirm"><strong>Finish</strong></li>
+                                </ul>
+                                <!-- fieldsets -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Account Information</h2>
+                                        <input type="email" name="email" placeholder="Email Id" />
+                                        <input type="text" name="uname" placeholder="UserName" />
+                                        <input type="password" name="pwd" placeholder="Password" />
+
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <form action="{{url_for('buy_pixel')}}" method="POST" enctype="multipart/form-data"></form>
+                                    <div class="form-card">
+                                        <input class="col-sm-5 btn" type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+
+                                        <input type="file" />
+                                        <div class="row justify-content-center">
+                                            <input class="col-sm-3" type="number" id="value1" name="value1" value="" placeholder="Column" name="column">
+                                            <input class="col-sm-3" type="number" id="value2" name="value2" value="" placeholder="Row" name="row">
+
+                                            <input class="col-sm-3" type="button" name="Sumbit" value="Amuont" onclick="javascript:addNumbers()" />
+
+                                            <input class="col-sm-2" type="text" id="answer" name="answer" value="" />
+                                            <div class="input-group-prepend"><span class="input-group-text">$</span></div>
+
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-sm-6 ">
+                                                <input type="text" size="15" name="uname" placeholder="shop name" />
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <select id="section" name="section">
+                                                    {% for section in sections %}
+                                                    <option value="{{section['section_name']}}">{{section['section_name']}}</option>
+                                                    {% endfor %}
+                                                  </select>  
+                                            </div><br>
+                                            <div class="col-sm-10">
+
+                                                <textarea class="form-control" placeholder=" description"></textarea>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                </form>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class=" mx-auto">
+                                                <div class="bg-white rounded-lg shadow-sm ">
+                                                    <!-- Credit card form tabs -->
+                                                    <ul role="tablist" class="nav  nav-pills rounded-pill nav-fill mb-3">
+                                                        <li class="nav-item">
+                                                            <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                                                                <i class="fa fa-credit-card"></i> Credit Card
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                                                                <i class="fa fa-paypal"></i> Paypal
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                                                                <i class="fa fa-university"></i> Others
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- End -->
+
+
+                                                    <!-- Credit card form content -->
+                                                    <div class="tab-content">
+
+                                                        <!-- credit card info-->
+                                                        <div id="nav-tab-card" class="tab-pane fade show active">
+
+                                                            <form role="form">
+
+                                                                <div class="form-group ">
+
+                                                                    <input type="text" name="username" placeholder="Jason Doe" required class="form-control">
+                                                                </div>
+
+                                                                <div class="form-group">
+
+                                                                    <div class="input-group">
+                                                                        <input type="text" name="cardNumber" placeholder="Your card number" class="form-control" required>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="input-group-append">
+                                                                                <span class="input-group-text text-muted">
+                                                                                          <i class="fa fa-cc-visa mx-1"></i>
+                                                                                          <i class="fa fa-cc-amex mx-1"></i>
+                                                                                          <i class="fa fa-cc-mastercard mx-1"></i>
+                                                                                      </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label><span class="hidden-xs">Expiration</span></label>
+                                                                            <div class="input-group">
+                                                                                <input type="number" placeholder="MM" name="" class="form-control" required>
+                                                                                <input type="number" placeholder="YY" name="" class="form-control" required>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group mb-4">
+                                                                            <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                                                                          <i class="fa fa-question-circle"></i>
+                                                                                      </label>
+                                                                            <input type="text" required class="form-control">
+                                                                        </div>
+                                                                    </div>
+
+
+
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+                                                        <!-- End -->
+
+                                                        <!-- Paypal info -->
+                                                        <div id="nav-tab-paypal" class="tab-pane fade">
+                                                            <p>Paypal is easiest way to pay online</p>
+                                                            <p>
+                                                                <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i> Log into my Paypal</button>
+                                                            </p>
+                                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                        <!-- End -->
+
+                                                        <!-- bank transfer info -->
+                                                        <div id="nav-tab-bank" class="tab-pane fade">
+                                                            <p>hello you can come to our company </p>
+
+                                                        </div>
+                                                        <!-- End -->
+                                                    </div>
+                                                    <!-- End -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    <a href="pixels.html"> <input type="button" name="make_payment" class="next action-button" value="Confirm" /></a>
+                                    </a>
+                                </fieldset>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Core JavaScript
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script language="javascript">
+        function addNumbers() {
+            var val1 = parseInt(document.getElementById("value1").value);
+            var val2 = parseInt(document.getElementById("value2").value);
+            var ansD = document.getElementById("answer");
+            ansD.value = val1 + val2;
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            var current_fs, next_fs, previous_fs; //fieldsets
+            var opacity;
+
+            $(".next").click(function() {
+
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+
+                //Add Class Active
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                //show the next fieldset
+                next_fs.show();
+                //hide the current fieldset with style
+                current_fs.animate({
+                    opacity: 0
+                }, {
+                    step: function(now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({
+                            'opacity': opacity
+                        });
+                    },
+                    duration: 600
+                });
+            });
+
+            $(".previous").click(function() {
+
+                current_fs = $(this).parent();
+                previous_fs = $(this).parent().prev();
+
+                //Remove class active
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+                //show the previous fieldset
+                previous_fs.show();
+
+                //hide the current fieldset with style
+                current_fs.animate({
+                    opacity: 0
+                }, {
+                    step: function(now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previous_fs.css({
+                            'opacity': opacity
+                        });
+                    },
+                    duration: 600
+                });
+            });
+
+            $('.radio-group .radio').click(function() {
+                $(this).parent().find('.radio').removeClass('selected');
+                $(this).addClass('selected');
+            });
+
+            $(".submit").click(function() {
+                return false;
+            })
+
+        });
+    </script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 {% endblock %}

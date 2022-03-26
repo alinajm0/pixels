@@ -1,0 +1,16 @@
+{% extends "layout.html"%}
+{% block content %}
+<form action="{{url_for('buy_pixel')}}" method="POST" enctype="multipart/form-data">
+    <input type="text" placeholder="Brand Name" name="name">
+    <input type="number" placeholder="Column" name="column">
+    <input type="number" placeholder="Row" name="row">
+    <select id="section" name="section">
+        {% for section in sections %}
+        <option value="{{section['section_name']}}">{{section['section_name']}}</option>
+        {% endfor %}
+      </select>    
+      <input type="text" placeholder="Description" name="desc">
+    <input type="file" id="img_brand" name="img_brand" accept="image/png, image/jpg">
+    <button type="submit" class="site-btn">Buy Now</button>
+</form>
+{% endblock %}

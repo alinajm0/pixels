@@ -10,8 +10,8 @@
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink"><a href="blog-category.html " title="">{{ brands[0]['section_name'] }}</a></span>
-                                <h4><a href="single.html " title=" ">{{ brands[0]['desc'] }}</a></h4>
+                                <span class="bg-pink"><a href="{{url_for('single', id = brands[0]['id'])}} " title="">{{ brands[0]['section_name'] }}</a></span>
+                                <h4><a href="{{url_for('single', id = brands[0]['id'])}} " title=" ">{{ brands[0]['desc'] }}</a></h4>
                             </div>
                             <!-- end meta -->
                         </div>
@@ -29,8 +29,8 @@
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink "><a href="blog-category.html" title="">{{ brands[1]['section_name'] }}</a></span>
-                                <h4><a href="single.html " title=" ">{{ brands[1]['desc'] }}</a></h4>
+                                <span class="bg-pink "><a href="{{url_for('single', id = brands[1]['id'])}} "title="">{{ brands[1]['section_name'] }}</a></span>
+                                <h4><a href="{{url_for('single', id = brands[1]['id'])}} " title=" ">{{ brands[1]['desc'] }}</a></h4>
 
 
                             </div>
@@ -47,8 +47,8 @@
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink "><a href="blog-category.html " title=" ">{{ brands[2]['section_name'] }}</a></span>
-                                <h4><a href="single.html " title=" ">{{ brands[2]['desc'] }}</a></h4>
+                                <span class="bg-pink "><a href="{{url_for('single', id = brands[2]['id'])}} "title="">{{ brands[2]['section_name'] }}</a></span>
+                                <h4><a href="{{url_for('single', id = brands[2]['id'])}} " title=" ">{{ brands[2]['desc'] }}</a></h4>
                             </div>
                             <!-- end meta -->
                         </div>
@@ -63,8 +63,8 @@
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink "><a href="blog-category.html " title=" ">{{ brands[3]['section_name'] }}</a></span>
-                                <h4><a href="single.html " title=" ">{{ brands[3]['desc'] }}</a></h4>
+                                <span class="bg-pink "><a href="{{url_for('single', id = brands[1]['id'])}} "title="">{{ brands[3]['section_name'] }}</a></span>
+                                <h4><a href="{{url_for('single', id = brands[3]['id'])}} " title=" ">{{ brands[3]['desc'] }}</a></h4>
                             </div>
                             <!-- end meta -->
                         </div>
@@ -82,8 +82,8 @@
                     <div class="shadoweffect ">
                         <div class="shadow-desc ">
                             <div class="blog-meta ">
-                                <span class="bg-pink "><a href="blog-category.html " title=" ">{{ brands[4]['section_name'] }}</a></span>
-                                <h4><a href="single.html " title=" ">{{ brands[4]['desc'] }}</a></h4>
+                                <span class="bg-pink "><a href="{{url_for('single', id = brands[1]['id'])}} "title="">{{ brands[4]['section_name'] }}</a></span>
+                                <h4><a href="{{url_for('single', id = brands[4]['id'])}} " title=" ">{{ brands[4]['desc'] }}</a></h4>
                             </div>
                             <!-- end meta -->
                         </div>
@@ -125,7 +125,7 @@
                                 <div class="thumb-wrapper">
 
                                     <div class="img-box">
-                                        <img src="../{{ pixel['img_path'] }}" height="250" width="250" alt="">
+                                        <img src="../{{ pixel['img_path'] }}" href="{{url_for('single', id = pixel['id'])}}" height="250" width="250" alt="">
                                     </div>
                                     <div class="thumb-content">
                                         <h4>{{ pixel['desc'] }}</h4>
@@ -152,7 +152,7 @@
                                 <div class="thumb-wrapper">
 
                                     <div class="img-box">
-                                        <img src="../{{ pixel['img_path'] }}" height="250" width="250" alt="">
+                                        <img src="../{{ pixel['img_path'] }}" href="{{url_for('single', id = pixel['id'])}}" height="250" width="250" alt="">
                                     </div>
                                     <div class="thumb-content">
                                         <h4>{{ pixel['desc'] }}</h4>
@@ -194,7 +194,7 @@
                             <div class="col-md-4 pb-4">
                                 <div class="blog-box">
                                     <div class="post-media">
-                                        <a href="single.html" title="">
+                                        <a href="{{url_for('single', id = visit['id'])}}" title="">
                                             <img src="../{{ visit['img_path'] }}" width="600px" height="260px" alt="">
                                             <div class="hovereffect">
                                                 <span></span>
@@ -205,7 +205,7 @@
                                             <div class="shadow-desc ">
                                                 <div class="blog-meta ">
 
-                                                    <h4><a href="single.html " title="">{{ visit['desc'] }}</a></h4>
+                                                    <h4><a href="{{url_for('single', id = visit['id'])}} " title="">{{ visit['desc'] }}</a></h4>
 
                                                 </div>
                                                 <!-- end meta -->
@@ -239,7 +239,7 @@
                     <div class="widget">
                         <div class="blog-box ">
                             <div class="post-media ">
-                                <a href="single.html " title=" ">
+                                <a href="{{url_for('single', id = like['id'])}} " title=" ">
                                     <img src="../{{ like['img_path'] }}" width="690px" height="545px" alt=" ">
                                     <div class="hovereffect ">
                                         <span></span>
@@ -249,7 +249,7 @@
                                         <div class="shadow-desc ">
                                             <div class="blog-meta ">
 
-                                                <h4><a href="single.html " title=" ">{{ like['desc'] }}</a></h4>
+                                                <h4><a href="{{url_for('single', id = like['id'])}} " title=" ">{{ like['desc'] }}</a></h4>
 
                                             </div>
                                             <!-- end meta -->

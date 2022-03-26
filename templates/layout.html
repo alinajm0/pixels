@@ -35,6 +35,8 @@
 <!-- Custom styles for this template -->
 <!-- Colors for this template -->
 <link href="../static/css/colors.css" rel="stylesheet">
+<link href="../static/css/payment.css" rel="stylesheet">
+
 
 </head>
 
@@ -136,13 +138,13 @@
                                         <div class="mega-menu-content clearfix">
                                             {% for section in sections %}
                                             <div class="tab">
-                                                <button class="tablinks active" onclick="openCategory(event, '{{ section[',section_name,'] }}')"> {{section['section_name']}}</button>
+                                                <button class="tablinks active" onclick="openCategory(event, '{{ section['section_name'] }}')"> {{section['section_name']}}</button>
                                             </div>
-
                                             <div class="tab-details clearfix">
                                                 <div id="{{ section['section_name'] }}" class="tabcontent">
                                                     <div class="row">
-                                                        {% for brand in top_brands %} {% if section['section_name'] == brand['section_name'] %}
+                                                        {% for brand in top_brands %} 
+                                                        {% if section['section_name'] == brand['section_name'] %}
                                                         <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
                                                             <div class="blog-box">
                                                                 <div class="post-media">
@@ -162,7 +164,8 @@
                                                             </div>
                                                             <!-- end blog-box -->
                                                         </div>
-                                                        {% endif %} {% endfor %}
+                                                        {% endif %} 
+                                                        {% endfor %}
                                                     </div>
                                                     <!-- end row -->
                                                 </div>
@@ -189,7 +192,9 @@
             </header>
         </div>
 
-        {% block content %} {% endblock %}
+        {% block content %} 
+        
+        {% endblock %}
 
         <footer class=" footer mt-5">
             <div class="container mt-4">

@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, redirect, flash,session, url_
 from cs50 import SQL
 from flask_session import Session
 import os
+import stripe
 
 app = Flask(__name__) 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -12,8 +13,10 @@ app.config['SESSION_PERMANENT'] = False
 app.config['SESSION_TYPE'] = "filesystem"
 Session(app)
 
-sections = DB.execute("SELECT id, section_name from sections order by section_name desc")
 
+sections = DB.execute("SELECT id, section_name from sections order by section_name desc")
+public_key= "pk_test_TYooMQauvdEDq54NiTphI7jx"
+secret_key= "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
 
 @app.route("/")
 def index():
@@ -40,13 +43,13 @@ def index():
         limit 4
         """)
         top_pixel_visiting = DB.execute("""       
-        select brands.desc, brands.img_path
+        select brands.id, brands.desc, brands.img_path
         from brands 
         order by visiting 
         limit 12
         """)
         top_pixel_likes = DB.execute("""       
-        select brands.desc, brands.img_path
+        select brands.id, brands.desc, brands.img_path
         from brands 
         order by likes 
         limit 2
@@ -165,7 +168,7 @@ def buy_pixel():
         return redirect("/")
 
     else:
-        return render_template("/buy-Pixel.html", sections = sections)    
+        return render_template("/buy-Pixel.html", sections = sections, public_key = public_key)    
 
     
 
